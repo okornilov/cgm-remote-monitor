@@ -10,7 +10,7 @@
 }
 
 /*
-  Icon font for additional plugin icons. 
+  Icon font for additional plugin icons.
   Please read assets/fonts/README.md about update process
 */
 @font-face {
@@ -22,38 +22,38 @@
   font-style: normal;
 }
 
- [class^="icon-"]:before, [class*=" icon-"]:before, 
+ [class^="icon-"]:before, [class*=" icon-"]:before,
  [class^="plugicon-"]:before, [class*=" plugicon-"]:before {
   font-family: "nsicons";
   font-style: normal;
   font-weight: normal;
   speak: none;
- 
+
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
   margin-right: .2em;
   text-align: center;
   /* opacity: .8; */
- 
+
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
- 
+
   /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
- 
+
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
   margin-left: .2em;
- 
+
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
- 
+
   /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- 
+
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
@@ -138,17 +138,22 @@ a, a:visited, a:link {
 }
 
 .primary {
-  font-family: 'Ubuntu', Verdana, Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
   vertical-align: middle;
   clear: both;
   white-space: nowrap;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .bgStatus {
-  float: right;
-  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
   white-space: normal;
-  padding-right: 20px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .urgent .bgButton {
@@ -168,34 +173,23 @@ a, a:visited, a:link {
 }
 
 .bgStatus .currentBG {
-  font-size: 120px;
-  line-height: 100px;
   text-decoration: line-through;
-  vertical-align: middle;
-}
-
-.bgStatus .currentBG.bg-limit, .bgStatus .currentBG.icon-hourglass {
-  font-size: 90px;
 }
 
 .bgStatus .pill.direction {
   font-weight: normal;
   text-decoration: none;
-  font-size: 90px;
-  line-height: 90px;
   vertical-align: middle;
   border: none;
   background: none;
 }
 
 .bgStatus .majorPills {
-  font-size: 30px;
-  line-height: 34px;
+  font-size: 3rem;
 }
 
 .minorPills {
-  font-size: 22px;
-  line-height: 25px;
+  font-size: 1rem;
   z-index: 500;
   white-space: normal;
 }
@@ -210,12 +204,13 @@ a, a:visited, a:link {
 
 .pill {
   white-space: nowrap;
-  border-radius: 5px;
+  border-radius: 1rem;
   border: 2px solid #808080;
   background: #808080;
   display: inline-block;
-  margin-bottom: 4px;
-  padding: 2px 0;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  padding: 0.8rem;
 }
 
 .pill em, .pill label {
@@ -265,17 +260,20 @@ a, a:visited, a:link {
 }
 
 .status {
-  color: #808080;
-  font-size: 100px;
+  color: #14f1ea;
+  font-size: 7rem;
   white-space: normal;
 }
 .statusBox {
-  text-align: center;
-  width: 40%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 .statusPills {
-  font-size: 20px;
-  line-height: 23px;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
   margin-left: 5px;
 }
 
@@ -335,11 +333,10 @@ a, a:visited, a:link {
 }
 
 .bgButton {
-  margin: 10px;
   border: 2px solid #000;
   border-radius: 5px;
   display: inline-block;
-  width: 360px;
+  font-size: 8rem;
 }
 
 .loading .pill.rawbg {
@@ -474,354 +471,4 @@ a, a:visited, a:link {
 
 .authentication-status .small {
   font-size: 12px;
-}
-
-@media (max-width: 1000px) {
-  .bgStatus {
-    width: 450px;
-  }
-
-  .bgButton {
-    width: auto;
-  }
-
-  .bgStatus .currentBG {
-    font-size: 80px;
-    line-height: 80px;
-  }
-
-  .bgStatus .currentBG.bg-limit, .bgStatus .currentBG.icon-hourglass {
-    font-size: 70px;
-  }
-
-  .bgStatus .pill.direction {
-    font-size: 70px;
-    line-height: 70px;
-  }
-
-  .bgStatus .majorPills {
-    font-size: 20px;
-    line-height: 24px;
-  }
-
-  .bgStatus .minorPills {
-    font-size: 16px;
-    line-height: 18px;
-  }
-
-  .status {
-    font-size: 70px;
-    padding-top: 8px;
-  }
-
-  .statusPills {
-    font-size: 15px;
-    line-height: 17px;
-  }
-
-  .focus-range {
-    margin: 0;
-    width: 50%;
-  }
-
-  .focus-range li {
-    font-size: 14px;
-  }
-
-  #silenceBtn a {
-    font-size: 30px;
-  }
-
-  #chartContainer {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 750px) {
-  .x.axis {
-    font-size: 2.5vmin !important;
-  }
-
-
-  .bgStatus {
-    width: 50%;
-    padding: 0 0 20px 0;
-  }
-
-  .pill.rawbg em {
-    font-size: 14px;
-  }
-
-  .pill.rawbg label {
-    font-size: 12px;
-  }
-
-  .statusBox {
-    width: auto;
-  }
-
-  .bgStatus .currentBG {
-    font-size: 70px;
-    line-height: 60px;
-  }
-
-  .bgStatus .currentBG.bg-limit, .bgStatus .currentBG.icon-hourglass {
-    font-size: 50px;
-  }
-
-  .bgStatus .pill.direction {
-    font-size: 50px;
-    line-height: 50px;
-  }
-
-  .bgStatus .majorPills {
-    font-size: 15px;
-    line-height: 17px;
-  }
-
-  .bgStatus .minorPills {
-    font-size: 12px;
-    line-height: 13px;
-  }
-
-  .status {
-    font-size: 50px;
-    width: 250px;
-  }
-}
-
-@media (max-width: 400px) {
-  .primary {
-    text-align: center;
-    margin-bottom: 0;
-  }
-
-  .bgStatus {
-    float: none;
-    padding: 0;
-    text-align: center;
-    width: 250px;
-  }
-
-
-  .bgButton {
-    margin: 5px;
-    width: auto;
-  }
-
-  .bgStatus .currentBG {
-    font-size: 70px;
-    line-height: 70px;
-  }
-
-  .bgStatus .currentBG.bg-limit, .bgStatus .currentBG.icon-hourglass {
-    font-size: 60px;
-    padding-left: 20px;
-  }
-
-  .bgStatus .pill.direction {
-    font-size: 60px;
-    line-height: 60px;
-  }
-
-  .bgStatus .majorPills {
-    font-size: 15px;
-    line-height: 17px;
-  }
-
-  .bgStatus .minorPills {
-    font-size: 12px;
-    line-height: 13px;
-  }
-
-  #silenceBtn a {
-    font-size: 20px;
-  }
-
-  #viewMenu {
-    left: inherit;
-    top: 170px;
-    right: 10px;
-    text-align: left;
-  }
-
-  .status {
-    padding-top: 0;
-    font-size: 20px;
-  }
-
-  .statusBox {
-    width: auto;
-  }
-
-  #currentTime {
-    display: inline;
-    vertical-align: middle;
-  }
-
-  .statusPills {
-    display: inline;
-    margin-left: auto;
-    font-size: 12px;
-    line-height: 13px;
-  }
-
-  .focus-range {
-    position: absolute;
-    top: 60px;
-    left: auto;
-    right: 10px;
-    margin: 0;
-    width: auto;
-  }
-
-  .focus-range li {
-    display: block;
-  }
-}
-
-@media (max-height: 700px) {
-  #chartContainer {
-    font-size: 14px;
-  }
-  .y.axis {
-    font-size: 2.5vmin !important;
-  }
-
-}
-
-@media (max-height: 600px) {
-  #chartContainer {
-    font-size: 12px;
-  }
-}
-
-@media (max-height: 480px) {
-  #container #toolbar {
-    float: right;
-    height: auto;
-    background: none;
-    border-bottom: none;
-    margin: 0px;
-  }
-
-  #buttonbar {
-    margin-right: 0px;
-    padding-right: 15px;
-    margin-top: 15px;
-    height: 44px;
-    opacity: 0.75;
-    vertical-align: middle;
-    position: absolute;
-    right: 0;
-    z-index: 500;
-    width: 400px;
-  }
-
-  #toolbar .customTitle {
-    display: none;
-  }
-
-  .container {
-    top: 15px;
-    padding-bottom: 20px;
-  }
-
-  #chartContainer {
-    font-size: 10px;
-  }
-}
-
-@media (max-height: 480px) and (min-width: 400px) {
-  .bgStatus .currentBG {
-    font-size: 70px;
-    line-height: 60px;
-  }
-
-  .bgStatus .currentBG.bg-limit, .bgStatus .currentBG.icon-hourglass {
-    font-size: 70px;
-  }
-
-  .bgStatus .pill.direction {
-    font-size: 50px;
-    line-height: 50px;
-  }
-
-  .bgStatus .majorPills {
-    font-size: 15px;
-    line-height: 17px;
-  }
-
-  .bgStatus .minorPills {
-    font-size: 12px;
-    line-height: 13px;
-  }
-
-  .status {
-    font-size: 50px;
-    padding-top: 5px;
-  }
-
-  .statusPills {
-    font-size: 15px;
-    line-height: 17px;
-  }
-
-}
-
-@media (max-height: 480px) and (max-width: 400px) {
-
-  .bgStatus {
-    text-align: center;
-    width: 220px;
-    left: 0;
-  }
-
-  .bgStatus .currentBG {
-    font-size: 60px;
-    line-height: 60px;
-  }
-
-  .bgStatus .currentBG.bg-limit, .bgStatus .currentBG.icon-hourglass {
-    font-size: 60px;
-  }
-
-  .bgStatus .pill.direction {
-    font-size: 50px;
-    line-height: 50px;
-  }
-
-  .bgStatus .majorPills {
-    font-size: 15px;
-    line-height: 17px;
-  }
-
-  .bgStatus .minorPills {
-    font-size: 12px;
-    line-height: 13px;
-  }
-
-  #silenceBtn {
-    right: -25px;
-  }
-
-  .focus-range {
-    position: absolute;
-    top: 40px;
-    left: auto;
-    right: 35px;
-    margin: 0;
-    width: auto;
-  }
-
-  .focus-range li {
-    display: block;
-  }
-
-  .statusPills {
-    display: inline;
-    margin-left: auto;
-    font-size: 12px;
-    line-height: 13px;
-  }
 }
